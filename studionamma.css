@@ -1,0 +1,220 @@
+@import url(https://db.onlinewebfonts.com/c/226f58ab113a6d821def90a7d6dc2427?family=GT+Pressura+Mono+Regular+Regular);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "GT Pressura Mono Regular Regular";
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 40px;
+    z-index:10;
+background-color: rgba(255,255, 255, 0.95);
+
+}
+.right{
+    width:35% ;
+    display: flex;
+    justify-content:space-between ;
+
+}
+.left{
+    width:23% ;
+    display: flex;
+    justify-content:space-between ;
+}
+.hero{
+    font-family:"Mixtape Extra Condensed";
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 150px;
+    text-align: center;
+
+}
+.cursor-box{
+position: absolute;
+pointer-events: none;   
+visibility: hidden;
+
+}
+.cursor-box video{
+    width: 100%;
+    height: 100%;
+}
+.pointer{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: fixed;
+}
+.hover-trigger{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.hero-text{
+    margin-top: 50px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 70px;
+
+}
+
+.image-stack{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 260px;
+    height: 350px;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 100;
+}
+.stack-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+.fixed-menu{
+    height:100vh ;
+    width: 100%;
+    position:absolute ;
+    background: crimson;
+    z-index: 10;
+    top: -100%;
+    transition: all ease 0.5s;
+}
+
+.box-cont{
+  margin-left: 10%;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.box1,.box2,.box3,.box4{
+  width: 500px;
+  height: 400px;
+  gap: 20px;
+  background: rgb(217, 159, 159);
+  border: 2px solid black;
+  border-radius: 10%;
+}
+
+.ok{
+    width: 460px;
+    height: 600px;
+    margin-left: 20px;
+    margin-top: -100px;
+}
+
+/*  Menu  */
+
+.menu-container {
+  width: 90%;
+  margin: 200px auto;
+  position: relative;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  padding: 28px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: 0.35s;
+}
+
+.menu-list:hover .menu-item {
+  opacity: 0.25;
+}
+
+.menu-list:hover .menu-item:hover {
+  opacity: 1;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: clamp(55px, 8vw, 130px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+
+
+
+.hover-preview {
+  position: fixed;
+  left: 50px;
+  top: 80px;
+  width: 260px;
+  height: 340px;
+  border-radius: 18px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: 0.35s;
+  z-index: 200;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.hover-preview.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hover-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pointer {
+  transition:
+    left 0.08s linear,
+    top 0.08s linear,
+    transform 0.25s ease;
+}
+
+.cursor-box {
+  transition:
+    left 0.18s ease,
+    top 0.18s ease;
+}
+
+.fixed-menu.active {
+  transform: translateY(0);
+}
+.cursor-box {
+  transition: opacity 0.3s ease;
+}
